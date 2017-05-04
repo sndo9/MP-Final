@@ -1,4 +1,4 @@
-22:43:57 **** Build of project standalone_bsp_0 ****
+04:00:18 **** Build of project standalone_bsp_0 ****
 make -k all 
 libgen -hw ../system_hw_platform/system.xml\
 	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
@@ -45,5 +45,5 @@ arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
 Running execs_generate.
 'Finished building libraries'
 
-22:44:10 Build Finished (took 13s.134ms)
+04:00:31 Build Finished (took 13s.464ms)
 

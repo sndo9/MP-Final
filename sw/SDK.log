@@ -57,3 +57,27 @@
 03:22:41.008 INFO  - Settings changed on project device-tree_bsp_0. Triggering a rebuild... 
 03:50:27.143 INFO  - Project system_hw_platform's source hardware specification located at C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.xml is now different from the local copy.
 		 The local copy will be replaced with the source specification and your workspace will be updated. 
+03:59:52.981 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+03:59:52.991 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+03:59:53.001 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+03:59:53.011 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+03:59:53.031 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+03:59:53.031 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+03:59:53.161 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+04:00:11.279 INFO  - Updating hardware inferred compiler options for bt_configure. 
+04:00:12.029 INFO  - Updating hardware inferred compiler options for hello. 
+04:00:12.779 INFO  - Updating hardware inferred compiler options for zynq_fsbl. 
+04:00:12.789 INFO  - Clearing existing target manager status. 
+04:00:12.889 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.c into \zynq_fsbl\src\ps7_init.c. 
+04:00:12.909 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.h into \zynq_fsbl\src\ps7_init.h. 
+04:00:12.929 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.html into \zynq_fsbl\src\ps7_init.html. 
+04:00:12.939 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.tcl into \zynq_fsbl\src\ps7_init.tcl. 
+04:00:13.149 INFO  - Closing and re-opening the MSS file of ther project standalone_bsp_0 
+04:00:13.309 INFO  - Closing and re-opening the MSS file of ther project device-tree_bsp_0 
+04:00:13.359 WARN  - Unable to determine location of documentation for OS device-tree. 
+04:00:13.449 INFO  - Closing and re-opening the MSS file of ther project bt_configure_bsp 
+04:00:13.589 INFO  - Closing and re-opening the MSS file of ther project hello_bsp 
+04:00:14.729 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+04:02:13.139 INFO  - Invoking Bootgen:  
+04:02:13.669 INFO  - Bootgen command execution is done. 
+04:18:16.566 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

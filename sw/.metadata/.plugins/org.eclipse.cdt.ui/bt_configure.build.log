@@ -1,6 +1,54 @@
-23:59:56 **** Incremental Build of configuration Debug for project bt_configure ****
+04:01:02 **** Build of configuration Debug for project bt_configure ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../bt_configure_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:21:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:22:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:23:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:24:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:25:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:26:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:56:5: warning: implicit declaration of function 'test_connection' [-Wimplicit-function-declaration]
+../src/helloworld.c:53:9: warning: unused variable 'x' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'rx' [-Wunused-variable]
+../src/helloworld.c:28:6: warning: variable 'reg10a' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:26:7: warning: unused variable 'reg15' [-Wunused-variable]
+../src/helloworld.c:25:7: warning: unused variable 'reg14' [-Wunused-variable]
+../src/helloworld.c:24:7: warning: unused variable 'reg13' [-Wunused-variable]
+../src/helloworld.c:23:7: warning: unused variable 'reg12' [-Wunused-variable]
+../src/helloworld.c:22:7: warning: unused variable 'reg11' [-Wunused-variable]
+../src/helloworld.c: In function 'clear':
+../src/helloworld.c:89:2: warning: passing argument 2 of 'Xil_Out32' makes integer from pointer without a cast [enabled by default]
+In file included from ../../bt_configure_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78:0,
+                 from ../../bt_configure_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:4:
+../../bt_configure_bsp/ps7_cortexa9_0/include/xil_io.h:240:6: note: expected 'u32' but argument is of type 'void (*)(struct XUartPs *)'
+../src/helloworld.c: At top level:
+../src/helloworld.c:133:6: warning: conflicting types for 'test_connection' [enabled by default]
+../src/helloworld.c:56:5: note: previous implicit declaration of 'test_connection' was here
+../src/helloworld.c: In function 'test_connection':
+../src/helloworld.c:142:2: warning: pointer targets in passing argument 2 of 'send_recieve' differ in signedness [-Wpointer-sign]
+../src/helloworld.c:83:6: note: expected 'char *' but argument is of type 'u8 *'
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../bt_configure_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: bt_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bt_configure_bsp/ps7_cortexa9_0/lib -o "bt_configure.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bt_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size bt_configure.elf  |tee "bt_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33704	   2176	  29860	  65740	  100cc	bt_configure.elf
+'Finished building: bt_configure.elf.size'
+' '
 
-23:59:56 Build Finished (took 80ms)
+04:01:02 Build Finished (took 520ms)
 
