@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/data/lockout_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Thu May 04 03:32:17 2017 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib axi_lite_ipif_v1_01_a  all 
+lib lockout_v1_00_a user_logic vhdl
+lib lockout_v1_00_a lockout vhdl

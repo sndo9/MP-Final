@@ -1,0 +1,15 @@
+##############################################################################
+## Filename:          C:\tmp\MP-Final\system/drivers/lockout_v1_00_a/data/lockout_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Thu May 04 03:32:21 2017 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1.0;
+
+BEGIN DRIVER lockout
+
+  OPTION supported_peripherals = (lockout);
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+END DRIVER

@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+	[bootloader]C:\tmp\MP-Final\sw\zynq_fsbl\Debug\zynq_fsbl.elf
+	C:\tmp\MP-Final\sw\system_hw_platform\system.bit
+	U:\mp\MP-3\bootimage\uboot.elf
+}

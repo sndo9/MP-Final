@@ -1,0 +1,1861 @@
+22:42:09 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+22:43:57 **** Clean-only build of project standalone_bsp_0 ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+22:43:57 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+22:46:18 **** Build of project device-tree_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+#--------------------------------------
+
+# device-tree BSP DRC...
+
+#--------------------------------------
+
+Running generate.
+#--------------------------------------
+
+# device-tree BSP generate...
+
+#--------------------------------------
+
+--- device tree generator version: v1.1 ---
+
+generating xilinx.dts
+
+Clock Port Summary:
+
+axi4lite_0.interconnect_aclk connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+axi4lite_0.S_AXI_ACLK connected to axi4lite_0_S_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+axi4lite_0.M_AXI_ACLK connected to axi4lite_0_M_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+sws_8bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+leds_8bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+btns_5bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+ps7_axi_interconnect_0.M_AXI_GP0_ACLK connected to
+processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.M_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_M_AXI_GP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_ACP_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_ACP_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_GP0_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP0_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP3_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP3_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP2_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP2_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP0_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP0_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_ACLK connected to ps7_axi_interconnect_0_S_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.M_AXI_ACLK connected to ps7_axi_interconnect_0_M_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+IP connected to bus: ps7_axi_interconnect_0
+
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_0
+
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_uart_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_uart_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_2
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_3
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_sd_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ttc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ethernet_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_usb_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_linear_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddr_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpio_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddrc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_dev_cfg_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_xadc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_coresight_comp_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ocmc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpv_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_intc_dist_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_globaltimer_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_l2cachec_0
+
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_s
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_iop_bus_config_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scugic_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scutimer_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuwdt_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_slcr_0
+
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_ns
+
+-slave btns_5bits
+
+-slave leds_8bits
+
+-slave ps7_afi_0
+
+IP 125271872 ps7_afi_0 is already appended - skip it
+
+-slave ps7_afi_1
+
+IP 125272000 ps7_afi_1 is already appended - skip it
+
+-slave ps7_afi_2
+
+IP 125272128 ps7_afi_2 is already appended - skip it
+
+-slave ps7_afi_3
+
+IP 125272256 ps7_afi_3 is already appended - skip it
+
+-slave ps7_coresight_comp_0
+
+IP 125273920 ps7_coresight_comp_0 is already appended - skip it
+
+-slave ps7_ddr_0
+
+IP 125273152 ps7_ddr_0 is already appended - skip it
+
+-slave ps7_ddrc_0
+
+IP 125273536 ps7_ddrc_0 is already appended - skip it
+
+-slave ps7_dev_cfg_0
+
+IP 125273664 ps7_dev_cfg_0 is already appended - skip it
+
+-slave ps7_dma_ns
+
+-slave ps7_dma_s
+
+IP 125274816 ps7_dma_s is already appended - skip it
+
+-slave ps7_ethernet_0
+
+IP 125272640 ps7_ethernet_0 is already appended - skip it
+
+-slave ps7_globaltimer_0
+
+IP 125274560 ps7_globaltimer_0 is already appended - skip it
+
+-slave ps7_gpio_0
+
+IP 125273280 ps7_gpio_0 is already appended - skip it
+
+-slave ps7_gpv_0
+
+IP 125274176 ps7_gpv_0 is already appended - skip it
+
+-slave ps7_intc_dist_0
+
+IP 125274432 ps7_intc_dist_0 is already appended - skip it
+
+-slave ps7_iop_bus_config_0
+
+IP 125274944 ps7_iop_bus_config_0 is already appended - skip it
+
+-slave ps7_l2cachec_0
+
+IP 125274688 ps7_l2cachec_0 is already appended - skip it
+
+-slave ps7_ocmc_0
+
+IP 125274048 ps7_ocmc_0 is already appended - skip it
+
+-slave ps7_qspi_0
+
+IP 125272896 ps7_qspi_0 is already appended - skip it
+
+-slave ps7_qspi_linear_0
+
+IP 125273024 ps7_qspi_linear_0 is already appended - skip it
+
+-slave ps7_ram_0
+
+IP 125275072 ps7_ram_0 is already appended - skip it
+
+-slave ps7_ram_1
+
+IP 125275200 ps7_ram_1 is already appended - skip it
+
+-slave ps7_scuc_0
+
+IP 125274304 ps7_scuc_0 is already appended - skip it
+
+-slave ps7_scugic_0
+
+IP 125275328 ps7_scugic_0 is already appended - skip it
+
+-slave ps7_scutimer_0
+
+IP 125275456 ps7_scutimer_0 is already appended - skip it
+
+-slave ps7_scuwdt_0
+
+IP 125275584 ps7_scuwdt_0 is already appended - skip it
+
+-slave ps7_sd_0
+
+IP 125272384 ps7_sd_0 is already appended - skip it
+
+-slave ps7_slcr_0
+
+IP 125275712 ps7_slcr_0 is already appended - skip it
+
+-slave ps7_ttc_0
+
+IP 125272512 ps7_ttc_0 is already appended - skip it
+
+-slave ps7_uart_0
+
+IP 125271616 ps7_uart_0 is already appended - skip it
+
+-slave ps7_uart_1
+
+IP 125271744 ps7_uart_1 is already appended - skip it
+
+-slave ps7_usb_0
+
+IP 125272768 ps7_usb_0 is already appended - skip it
+
+-slave ps7_xadc_0
+
+IP 125273792 ps7_xadc_0 is already appended - skip it
+
+-slave sws_8bits
+
+ps7_afi_0
+
+ps7_afi_1
+
+ps7_afi_2
+
+ps7_afi_3
+
+ps7_coresight_comp_0
+
+ps7_ocmc_0
+
+ps7_gpv_0
+
+ps7_scuc_0
+
+ps7_intc_dist_0
+
+ps7_globaltimer_0
+
+ps7_l2cachec_0
+
+{serial1 aliasref ps7_uart_0 1} {serial0 aliasref ps7_uart_1 0} {ethernet0
+aliasref ps7_ethernet_0 0}
+
+Running post_generate.
+Running execs_generate.
+'Finished building libraries'
+23:00:42 **** Build of configuration Debug for project zynq_fsbl ****
+make all 
+'Building file: ../src/ddr_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/ddr_init.d" -MT"src/ddr_init.d" -o "src/ddr_init.o" "../src/ddr_init.c"
+'Finished building: ../src/ddr_init.c'
+' '
+'Building file: ../src/ff.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/ff.d" -MT"src/ff.d" -o "src/ff.o" "../src/ff.c"
+'Finished building: ../src/ff.c'
+' '
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/mmc.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/mmc.d" -MT"src/mmc.d" -o "src/mmc.o" "../src/mmc.c"
+'Finished building: ../src/mmc.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: ../src/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "../src/ps7_init.c"
+'Finished building: ../src/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: zynq_fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"C:\tmp\MP-Final\sw\zynq_fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zynq_fsbl.elf"  ./src/ddr_init.o ./src/ff.o ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/mmc.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zynq_fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zynq_fsbl.elf  |tee "zynq_fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  69840	  11528	  72500	 153868	  2590c	zynq_fsbl.elf
+'Finished building: zynq_fsbl.elf.size'
+' '
+23:01:29 **** Auto Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:01:53 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:03:55 **** Auto Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:14:51 **** Auto Build of configuration Debug for project zynq_fsbl ****
+make all 
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.c"
+'Finished building: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.c'
+' '
+'Building file: ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.d" -MT"p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.d" -o "p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.o" "../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.c"
+In file included from ../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.c:21:0:
+../p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_timer_hw.h:75:21: fatal error: xintc_l.h: No such file or directory
+compilation terminated.
+make: *** [p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.o] Error 1
+23:15:10 **** Clean-only build of configuration Debug for project zynq_fsbl ****
+make clean 
+rm -rf  ./src/ddr_init.o ./src/ff.o ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/mmc.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_init.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_timer_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/dummy.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_cg.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_hist.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_mcount_arm.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_mcount_mb.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_mcount_ppc.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/_exit.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/_open.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/_sbrk.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/abort.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/asm_vectors.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/boot.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/close.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/cpu_init.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/errno.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/fcntl.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/fstat.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/getpid.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/inbyte.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/isatty.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/kill.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/lseek.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/open.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/outbyte.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/print.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/putnum.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/read.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/sbrk.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/sleep.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/smc.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/translation_table.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/uart.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/unlink.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/usleep.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/vectors.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/write.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil-crt0.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_assert.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_cache.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_exception.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_io.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_misc_psreset_api.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_mmu.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_printf.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_testcache.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_testio.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_testmem.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xl2cc_counter.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xpm_counter.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xtime_l.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_options.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_extra.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_bdring.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_control.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_g.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_hw.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_intr.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_selftest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_sinit.o  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/common_v1_00_a/src/xbasic_types.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/common_v1_00_a/src/xutil_memtest.o ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/common_v1_00_a/src/xversion.o  ./p3_BT_configure/src/bt_configure.o ./p3_BT_configure/src/platform.o  ./src/ddr_init.d ./src/ff.d ./src/fsbl_hooks.d ./src/image_mover.d ./src/main.d ./src/md5.d ./src/mmc.d ./src/nand.d ./src/nor.d ./src/pcap.d ./src/ps7_init.d ./src/qspi.d ./src/rsa.d ./src/sd.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/xadcps_v1_02_a/src/xadcps_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_endpoint.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/usbps_v1_05_a/src/xusbps_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_options.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/ttcps_v1_01_a/src/xttcps_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_clean.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_init.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/_profile_timer_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_cg.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_hist.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/_exit.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/_open.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/_sbrk.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/abort.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/close.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/errno.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/fcntl.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/fstat.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/getpid.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/inbyte.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/isatty.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/kill.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/lseek.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/open.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/outbyte.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/print.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/putnum.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/read.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/sbrk.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/sleep.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/smc.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/uart.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/unlink.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/usleep.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/vectors.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/write.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_assert.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_cache.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_exception.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_io.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_misc_psreset_api.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_mmu.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_printf.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_testcache.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_testio.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil_testmem.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xl2cc_counter.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xpm_counter.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xtime_l.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scuwdt_v1_02_a/src/xscuwdt_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scutimer_v1_02_a/src/xscutimer_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/scugic_v1_05_a/src/xscugic_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_options.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/qspips_v2_03_a/src/xqspips_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpiops_v1_02_a/src/xgpiops_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_extra.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/gpio_v3_01_a/src/xgpio_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_bdring.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_control.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/emacps_v1_05_a/src/xemacps_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/dmaps_v1_06_a/src/xdmaps_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_g.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_hw.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_intr.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_selftest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/devcfg_v2_04_a/src/xdevcfg_sinit.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/common_v1_00_a/src/xbasic_types.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/common_v1_00_a/src/xutil_memtest.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/common_v1_00_a/src/xversion.d  ./p3_BT_configure/src/bt_configure.d ./p3_BT_configure/src/platform.d  zynq_fsbl.elf.size  ./src/fsbl_handoff.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/dummy.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_mcount_arm.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_mcount_mb.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/profile/profile_mcount_ppc.d  ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/asm_vectors.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/boot.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/cpu_init.d ./p3_BT_configure_bsp/ps7_cortexa9_0/libsrc/standalone_v3_11_a/src/xil-crt0.d  zynq_fsbl.elf
+' '
+23:15:10 **** Auto Build of configuration Debug for project zynq_fsbl ****
+make all 
+'Building file: ../src/ddr_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/ddr_init.d" -MT"src/ddr_init.d" -o "src/ddr_init.o" "../src/ddr_init.c"
+'Finished building: ../src/ddr_init.c'
+' '
+'Building file: ../src/ff.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/ff.d" -MT"src/ff.d" -o "src/ff.o" "../src/ff.c"
+'Finished building: ../src/ff.c'
+' '
+'Building file: ../src/fsbl_handoff.S'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_handoff.d" -MT"src/fsbl_handoff.d" -o "src/fsbl_handoff.o" "../src/fsbl_handoff.S"
+'Finished building: ../src/fsbl_handoff.S'
+' '
+'Building file: ../src/fsbl_hooks.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/fsbl_hooks.d" -MT"src/fsbl_hooks.d" -o "src/fsbl_hooks.o" "../src/fsbl_hooks.c"
+'Finished building: ../src/fsbl_hooks.c'
+' '
+'Building file: ../src/image_mover.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/image_mover.d" -MT"src/image_mover.d" -o "src/image_mover.o" "../src/image_mover.c"
+'Finished building: ../src/image_mover.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/md5.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/md5.d" -MT"src/md5.d" -o "src/md5.o" "../src/md5.c"
+'Finished building: ../src/md5.c'
+' '
+'Building file: ../src/mmc.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/mmc.d" -MT"src/mmc.d" -o "src/mmc.o" "../src/mmc.c"
+'Finished building: ../src/mmc.c'
+' '
+'Building file: ../src/nand.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/nand.d" -MT"src/nand.d" -o "src/nand.o" "../src/nand.c"
+'Finished building: ../src/nand.c'
+' '
+'Building file: ../src/nor.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/nor.d" -MT"src/nor.d" -o "src/nor.o" "../src/nor.c"
+'Finished building: ../src/nor.c'
+' '
+'Building file: ../src/pcap.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/pcap.d" -MT"src/pcap.d" -o "src/pcap.o" "../src/pcap.c"
+'Finished building: ../src/pcap.c'
+' '
+'Building file: ../src/ps7_init.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/ps7_init.d" -MT"src/ps7_init.d" -o "src/ps7_init.o" "../src/ps7_init.c"
+'Finished building: ../src/ps7_init.c'
+' '
+'Building file: ../src/qspi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/qspi.d" -MT"src/qspi.d" -o "src/qspi.o" "../src/qspi.c"
+'Finished building: ../src/qspi.c'
+' '
+'Building file: ../src/rsa.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/rsa.d" -MT"src/rsa.d" -o "src/rsa.o" "../src/rsa.c"
+'Finished building: ../src/rsa.c'
+' '
+'Building file: ../src/sd.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/sd.d" -MT"src/sd.d" -o "src/sd.o" "../src/sd.c"
+'Finished building: ../src/sd.c'
+' '
+'Building target: zynq_fsbl.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -L"C:\tmp\MP-Final\sw\zynq_fsbl\src" -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "zynq_fsbl.elf"  ./src/ddr_init.o ./src/ff.o ./src/fsbl_handoff.o ./src/fsbl_hooks.o ./src/image_mover.o ./src/main.o ./src/md5.o ./src/mmc.o ./src/nand.o ./src/nor.o ./src/pcap.o ./src/ps7_init.o ./src/qspi.o ./src/rsa.o ./src/sd.o   -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: zynq_fsbl.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size zynq_fsbl.elf  |tee "zynq_fsbl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77208	  11528	  72500	 161236	  275d4	zynq_fsbl.elf
+'Finished building: zynq_fsbl.elf.size'
+' '
+23:15:26 **** Build of project bt_configure_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+23:15:40 **** Build of configuration Debug for project bt_configure ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../bt_configure_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../bt_configure_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: bt_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bt_configure_bsp/ps7_cortexa9_0/lib -o "bt_configure.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bt_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size bt_configure.elf  |tee "bt_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22868	   1096	  29780	  53744	   d1f0	bt_configure.elf
+'Finished building: bt_configure.elf.size'
+' '
+23:43:27 **** Auto Build of configuration Debug for project bt_configure ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../bt_configure_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:21:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:22:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:23:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:24:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:25:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:26:15: warning: initialization makes pointer from integer without a cast [enabled by default]
+../src/helloworld.c:56:5: warning: implicit declaration of function 'test_connection' [-Wimplicit-function-declaration]
+../src/helloworld.c:53:9: warning: unused variable 'x' [-Wunused-variable]
+../src/helloworld.c:35:6: warning: unused variable 'rx' [-Wunused-variable]
+../src/helloworld.c:28:6: warning: variable 'reg10a' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:26:7: warning: unused variable 'reg15' [-Wunused-variable]
+../src/helloworld.c:25:7: warning: unused variable 'reg14' [-Wunused-variable]
+../src/helloworld.c:24:7: warning: unused variable 'reg13' [-Wunused-variable]
+../src/helloworld.c:23:7: warning: unused variable 'reg12' [-Wunused-variable]
+../src/helloworld.c:22:7: warning: unused variable 'reg11' [-Wunused-variable]
+../src/helloworld.c: In function 'clear':
+../src/helloworld.c:89:2: warning: passing argument 2 of 'Xil_Out32' makes integer from pointer without a cast [enabled by default]
+In file included from ../../bt_configure_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78:0,
+                 from ../../bt_configure_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:4:
+../../bt_configure_bsp/ps7_cortexa9_0/include/xil_io.h:240:6: note: expected 'u32' but argument is of type 'void (*)(struct XUartPs *)'
+../src/helloworld.c: At top level:
+../src/helloworld.c:133:6: warning: conflicting types for 'test_connection' [enabled by default]
+../src/helloworld.c:56:5: note: previous implicit declaration of 'test_connection' was here
+../src/helloworld.c: In function 'test_connection':
+../src/helloworld.c:142:2: warning: pointer targets in passing argument 2 of 'send_recieve' differ in signedness [-Wpointer-sign]
+../src/helloworld.c:83:6: note: expected 'char *' but argument is of type 'u8 *'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: bt_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../bt_configure_bsp/ps7_cortexa9_0/lib -o "bt_configure.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: bt_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size bt_configure.elf  |tee "bt_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33700	   2176	  29860	  65736	  100c8	bt_configure.elf
+'Finished building: bt_configure.elf.size'
+' '
+23:43:48 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:43:49 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:44:10 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:44:10 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:51:58 **** Clean-only build of project bt_configure_bsp ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+23:51:58 **** Build of project bt_configure_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+23:52:12 **** Auto Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:52:49 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:52:49 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:53:53 **** Build of project hello_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+23:54:07 **** Build of configuration Debug for project hello ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: hello.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_bsp/ps7_cortexa9_0/lib -o "hello.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hello.elf  |tee "hello.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22868	   1096	  29780	  53744	   d1f0	hello.elf
+'Finished building: hello.elf.size'
+' '
+23:54:25 **** Clean-only build of project hello_bsp ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+23:54:26 **** Build of project hello_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+23:54:39 **** Auto Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:54:42 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:54:42 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:54:42 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:55:01 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:55:01 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:55:02 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:55:29 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:55:29 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:55:30 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:56:21 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:56:21 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:56:22 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:57:58 **** Auto Build of configuration Debug for project hello ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:43:17: warning: initialization makes pointer from integer without a cast [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hello.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_bsp/ps7_cortexa9_0/lib -o "hello.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hello.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hello.elf  |tee "hello.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22904	   1096	  29780	  53780	   d214	hello.elf
+'Finished building: hello.elf.size'
+' '
+23:58:00 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:58:00 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:58:01 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:58:19 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:58:19 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:58:20 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:59:14 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:59:14 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:59:15 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+23:59:55 **** Incremental Build of configuration Debug for project hello ****
+make all 
+make: Nothing to be done for `all'.
+23:59:56 **** Incremental Build of configuration Debug for project bt_configure ****
+make all 
+make: Nothing to be done for `all'.
+23:59:56 **** Incremental Build of configuration Debug for project zynq_fsbl ****
+make all 
+make: Nothing to be done for `all'.
+02:39:10 **** Clean-only build of project device-tree_bsp_0 ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+02:39:10 **** Build of project device-tree_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+#--------------------------------------
+
+# device-tree BSP DRC...
+
+#--------------------------------------
+
+Running generate.
+#--------------------------------------
+
+# device-tree BSP generate...
+
+#--------------------------------------
+
+--- device tree generator version: v1.1 ---
+
+generating xilinx.dts
+
+Clock Port Summary:
+
+axi4lite_0.interconnect_aclk connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+axi4lite_0.S_AXI_ACLK connected to axi4lite_0_S_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+axi4lite_0.M_AXI_ACLK connected to axi4lite_0_M_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+sws_8bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+leds_8bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+btns_5bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+ps7_axi_interconnect_0.M_AXI_GP0_ACLK connected to
+processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.M_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_M_AXI_GP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_ACP_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_ACP_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_GP0_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP0_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP3_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP3_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP2_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP2_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP0_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP0_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_ACLK connected to ps7_axi_interconnect_0_S_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.M_AXI_ACLK connected to ps7_axi_interconnect_0_M_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+IP connected to bus: ps7_axi_interconnect_0
+
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_0
+
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_uart_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_uart_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_2
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_3
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_sd_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ttc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ethernet_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_usb_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_linear_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddr_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpio_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddrc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_dev_cfg_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_xadc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_coresight_comp_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ocmc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpv_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_intc_dist_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_globaltimer_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_l2cachec_0
+
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_s
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_iop_bus_config_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scugic_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scutimer_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuwdt_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_slcr_0
+
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_ns
+
+-slave btns_5bits
+
+-slave leds_8bits
+
+-slave ps7_afi_0
+
+IP 124616512 ps7_afi_0 is already appended - skip it
+
+-slave ps7_afi_1
+
+IP 124616640 ps7_afi_1 is already appended - skip it
+
+-slave ps7_afi_2
+
+IP 124616768 ps7_afi_2 is already appended - skip it
+
+-slave ps7_afi_3
+
+IP 124616896 ps7_afi_3 is already appended - skip it
+
+-slave ps7_coresight_comp_0
+
+IP 124618560 ps7_coresight_comp_0 is already appended - skip it
+
+-slave ps7_ddr_0
+
+IP 124617792 ps7_ddr_0 is already appended - skip it
+
+-slave ps7_ddrc_0
+
+IP 124618176 ps7_ddrc_0 is already appended - skip it
+
+-slave ps7_dev_cfg_0
+
+IP 124618304 ps7_dev_cfg_0 is already appended - skip it
+
+-slave ps7_dma_ns
+
+-slave ps7_dma_s
+
+IP 124619456 ps7_dma_s is already appended - skip it
+
+-slave ps7_ethernet_0
+
+IP 124617280 ps7_ethernet_0 is already appended - skip it
+
+-slave ps7_globaltimer_0
+
+IP 124619200 ps7_globaltimer_0 is already appended - skip it
+
+-slave ps7_gpio_0
+
+IP 124617920 ps7_gpio_0 is already appended - skip it
+
+-slave ps7_gpv_0
+
+IP 124618816 ps7_gpv_0 is already appended - skip it
+
+-slave ps7_intc_dist_0
+
+IP 124619072 ps7_intc_dist_0 is already appended - skip it
+
+-slave ps7_iop_bus_config_0
+
+IP 124619584 ps7_iop_bus_config_0 is already appended - skip it
+
+-slave ps7_l2cachec_0
+
+IP 124619328 ps7_l2cachec_0 is already appended - skip it
+
+-slave ps7_ocmc_0
+
+IP 124618688 ps7_ocmc_0 is already appended - skip it
+
+-slave ps7_qspi_0
+
+IP 124617536 ps7_qspi_0 is already appended - skip it
+
+-slave ps7_qspi_linear_0
+
+IP 124617664 ps7_qspi_linear_0 is already appended - skip it
+
+-slave ps7_ram_0
+
+IP 124619712 ps7_ram_0 is already appended - skip it
+
+-slave ps7_ram_1
+
+IP 124619840 ps7_ram_1 is already appended - skip it
+
+-slave ps7_scuc_0
+
+IP 124618944 ps7_scuc_0 is already appended - skip it
+
+-slave ps7_scugic_0
+
+IP 124619968 ps7_scugic_0 is already appended - skip it
+
+-slave ps7_scutimer_0
+
+IP 124620096 ps7_scutimer_0 is already appended - skip it
+
+-slave ps7_scuwdt_0
+
+IP 124620224 ps7_scuwdt_0 is already appended - skip it
+
+-slave ps7_sd_0
+
+IP 124617024 ps7_sd_0 is already appended - skip it
+
+-slave ps7_slcr_0
+
+IP 124620352 ps7_slcr_0 is already appended - skip it
+
+-slave ps7_ttc_0
+
+IP 124617152 ps7_ttc_0 is already appended - skip it
+
+-slave ps7_uart_0
+
+IP 124616256 ps7_uart_0 is already appended - skip it
+
+-slave ps7_uart_1
+
+IP 124616384 ps7_uart_1 is already appended - skip it
+
+-slave ps7_usb_0
+
+IP 124617408 ps7_usb_0 is already appended - skip it
+
+-slave ps7_xadc_0
+
+IP 124618432 ps7_xadc_0 is already appended - skip it
+
+-slave sws_8bits
+
+ps7_afi_0
+
+ps7_afi_1
+
+ps7_afi_2
+
+ps7_afi_3
+
+ps7_coresight_comp_0
+
+ps7_ocmc_0
+
+ps7_gpv_0
+
+ps7_scuc_0
+
+ps7_intc_dist_0
+
+ps7_globaltimer_0
+
+ps7_l2cachec_0
+
+{serial0 aliasref ps7_uart_0 0} {serial1 aliasref ps7_uart_1 1} {ethernet0
+aliasref ps7_ethernet_0 0}
+
+Running post_generate.
+Running execs_generate.
+'Finished building libraries'
+03:22:41 **** Clean-only build of project device-tree_bsp_0 ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+03:22:41 **** Build of project device-tree_bsp_0 ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -lp
+U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib -pe
+ps7_cortexa9_0 -log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+#--------------------------------------
+
+# device-tree BSP DRC...
+
+#--------------------------------------
+
+Running generate.
+#--------------------------------------
+
+# device-tree BSP generate...
+
+#--------------------------------------
+
+--- device tree generator version: v1.1 ---
+
+generating xilinx.dts
+
+Clock Port Summary:
+
+axi4lite_0.interconnect_aclk connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+axi4lite_0.S_AXI_ACLK connected to axi4lite_0_S_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+axi4lite_0.M_AXI_ACLK connected to axi4lite_0_M_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+sws_8bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+leds_8bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+btns_5bits.S_AXI_ACLK connected to processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = 100000000
+
+ps7_axi_interconnect_0.M_AXI_GP0_ACLK connected to
+processing_system7_0_FCLK_CLK0:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.M_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_M_AXI_GP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_ACP_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_ACP_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_GP1_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP1_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_GP0_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_GP0_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP3_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP3_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP2_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP2_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_HP0_ACLK connected to
+ps7_axi_interconnect_0_S_AXI_HP0_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.S_AXI_ACLK connected to ps7_axi_interconnect_0_S_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+ps7_axi_interconnect_0.M_AXI_ACLK connected to ps7_axi_interconnect_0_M_ACLK:
+
+    CLK_FREQ_HZ = WARNING: no frequency found!
+
+IP connected to bus: ps7_axi_interconnect_0
+
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_0
+
+-master M_AXI_DP ps7_axi_interconnect_0 ps7_cortexa9_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_uart_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_uart_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_2
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_afi_3
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_sd_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ttc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ethernet_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_usb_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_qspi_linear_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddr_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpio_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ddrc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_dev_cfg_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_xadc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_coresight_comp_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ocmc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_gpv_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuc_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_intc_dist_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_globaltimer_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_l2cachec_0
+
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_s
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_iop_bus_config_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_ram_1
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scugic_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scutimer_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_scuwdt_0
+
+-slave S_AXI ps7_axi_interconnect_0 ps7_slcr_0
+
+-slave S_AXI_LITE ps7_axi_interconnect_0 ps7_dma_ns
+
+-slave btns_5bits
+
+-slave leds_8bits
+
+-slave ps7_afi_0
+
+IP 124354304 ps7_afi_0 is already appended - skip it
+
+-slave ps7_afi_1
+
+IP 124354432 ps7_afi_1 is already appended - skip it
+
+-slave ps7_afi_2
+
+IP 124354560 ps7_afi_2 is already appended - skip it
+
+-slave ps7_afi_3
+
+IP 124354688 ps7_afi_3 is already appended - skip it
+
+-slave ps7_coresight_comp_0
+
+IP 124356352 ps7_coresight_comp_0 is already appended - skip it
+
+-slave ps7_ddr_0
+
+IP 124355584 ps7_ddr_0 is already appended - skip it
+
+-slave ps7_ddrc_0
+
+IP 124355968 ps7_ddrc_0 is already appended - skip it
+
+-slave ps7_dev_cfg_0
+
+IP 124356096 ps7_dev_cfg_0 is already appended - skip it
+
+-slave ps7_dma_ns
+
+-slave ps7_dma_s
+
+IP 124357248 ps7_dma_s is already appended - skip it
+
+-slave ps7_ethernet_0
+
+IP 124355072 ps7_ethernet_0 is already appended - skip it
+
+-slave ps7_globaltimer_0
+
+IP 124356992 ps7_globaltimer_0 is already appended - skip it
+
+-slave ps7_gpio_0
+
+IP 124355712 ps7_gpio_0 is already appended - skip it
+
+-slave ps7_gpv_0
+
+IP 124356608 ps7_gpv_0 is already appended - skip it
+
+-slave ps7_intc_dist_0
+
+IP 124356864 ps7_intc_dist_0 is already appended - skip it
+
+-slave ps7_iop_bus_config_0
+
+IP 124357376 ps7_iop_bus_config_0 is already appended - skip it
+
+-slave ps7_l2cachec_0
+
+IP 124357120 ps7_l2cachec_0 is already appended - skip it
+
+-slave ps7_ocmc_0
+
+IP 124356480 ps7_ocmc_0 is already appended - skip it
+
+-slave ps7_qspi_0
+
+IP 124355328 ps7_qspi_0 is already appended - skip it
+
+-slave ps7_qspi_linear_0
+
+IP 124355456 ps7_qspi_linear_0 is already appended - skip it
+
+-slave ps7_ram_0
+
+IP 124357504 ps7_ram_0 is already appended - skip it
+
+-slave ps7_ram_1
+
+IP 124357632 ps7_ram_1 is already appended - skip it
+
+-slave ps7_scuc_0
+
+IP 124356736 ps7_scuc_0 is already appended - skip it
+
+-slave ps7_scugic_0
+
+IP 124357760 ps7_scugic_0 is already appended - skip it
+
+-slave ps7_scutimer_0
+
+IP 124357888 ps7_scutimer_0 is already appended - skip it
+
+-slave ps7_scuwdt_0
+
+IP 124358016 ps7_scuwdt_0 is already appended - skip it
+
+-slave ps7_sd_0
+
+IP 124354816 ps7_sd_0 is already appended - skip it
+
+-slave ps7_slcr_0
+
+IP 124358144 ps7_slcr_0 is already appended - skip it
+
+-slave ps7_ttc_0
+
+IP 124354944 ps7_ttc_0 is already appended - skip it
+
+-slave ps7_uart_0
+
+IP 124354048 ps7_uart_0 is already appended - skip it
+
+-slave ps7_uart_1
+
+IP 124354176 ps7_uart_1 is already appended - skip it
+
+-slave ps7_usb_0
+
+IP 124355200 ps7_usb_0 is already appended - skip it
+
+-slave ps7_xadc_0
+
+IP 124356224 ps7_xadc_0 is already appended - skip it
+
+-slave sws_8bits
+
+ps7_afi_0
+
+ps7_afi_1
+
+ps7_afi_2
+
+ps7_afi_3
+
+ps7_coresight_comp_0
+
+ps7_ocmc_0
+
+ps7_gpv_0
+
+ps7_scuc_0
+
+ps7_intc_dist_0
+
+ps7_globaltimer_0
+
+ps7_l2cachec_0
+
+{serial1 aliasref ps7_uart_0 1} {serial0 aliasref ps7_uart_1 0} {ethernet0
+aliasref ps7_ethernet_0 0}
+
+Running post_generate.
+Running execs_generate.
+'Finished building libraries'

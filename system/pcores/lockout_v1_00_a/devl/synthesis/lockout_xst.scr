@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "C:\tmp\MP-Final\system\pcores\lockout_v1_00_a\devl\synthesis\lockout_xst.prj"
+-top lockout
+-p virtex6
+-ofn "C:\tmp\MP-Final\system\pcores\lockout_v1_00_a\devl\synthesis\lockout_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib lockout_v1_00_a

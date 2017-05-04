@@ -177,3 +177,12 @@ BEGIN processing_system7
  PORT UART0_RX = processing_system7_0_UART0_RX
 END
 
+BEGIN lockout
+ PARAMETER INSTANCE = lockout_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x76600000
+ PARAMETER C_HIGHADDR = 0x7660ffff
+ BUS_INTERFACE S_AXI = axi4lite_0
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+END
+

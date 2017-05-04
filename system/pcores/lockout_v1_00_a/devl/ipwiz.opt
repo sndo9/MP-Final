@@ -1,0 +1,11 @@
+-batch 
+-create lockout 
+-ver 1.00.a 
+-dir "C:\tmp\MP-Final\system" 
+-lang vhdl 
+-bus axi4lite s 
+-rst 
+-reg 23 
+-xps 
+-ise 
+-driver 

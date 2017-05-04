@@ -1,0 +1,59 @@
+22:26:27.841 INFO  - Processing command line option -hwspec C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.xml. 
+22:43:57.014 INFO  - Saving repository preferences. 
+22:43:57.024 INFO  - Reading in cores from local repositories: 
+		 U:\mp\final\MP-3\repository
+		 U:\mp\final\MP-3\repository\ProcessorIPLib 
+22:43:57.094 INFO  - Updating libgen.options on all BSP projects. 
+22:43:57.104 INFO  - Cleaning BSP projects in the workspace. 
+22:44:23.833 INFO  - 'device-tree' is a board support package for an OS for which applications cannot be developed within SDK. 
+22:44:23.833 INFO  - You can configure and build project 'device-tree_bsp_0' within SDK at will, but have to export it into the appropriate third party environment to develop applications. 
+22:44:24.123 WARN  - Unable to determine location of documentation for OS device-tree. 
+23:03:54.090 INFO  - Invoking Bootgen:  
+23:03:55.140 INFO  - Bootgen command execution is done. 
+23:43:09.911 INFO  - FPGA configured successfully with bitstream "C:/tmp/MP-Final/sw/system_hw_platform/system.bit" 
+23:44:07.848 INFO  - FPGA configured successfully with bitstream "C:/tmp/MP-Final/sw/system_hw_platform/system.bit" 
+23:44:12.235 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:44:12.335 INFO  - PS initialization will be done as it is not done before. 
+23:44:12.335 INFO  - Running PS initialization.... 
+23:44:12.855 INFO  - ps7_init is completed. 
+23:44:12.955 INFO  - ps7_post_config is completed. 
+23:44:13.055 INFO  - PS Initialization is complete. 
+23:51:58.462 INFO  - Settings changed on project bt_configure_bsp. Triggering a rebuild... 
+23:51:58.782 INFO  - Refreshed build settings on project bt_configure 
+23:52:35.932 INFO  - FPGA configured successfully with bitstream "C:/tmp/MP-Final/sw/system_hw_platform/system.bit" 
+23:52:50.738 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:52:50.848 INFO  - PS initialization will be done as it is not done before. 
+23:52:50.848 INFO  - Running PS initialization.... 
+23:52:51.368 INFO  - ps7_init is completed. 
+23:52:51.468 INFO  - ps7_post_config is completed. 
+23:52:51.568 INFO  - PS Initialization is complete. 
+23:54:25.554 INFO  - Settings changed on project hello_bsp. Triggering a rebuild... 
+23:54:25.894 INFO  - Refreshed build settings on project hello 
+23:54:43.405 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+23:54:46.805 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:55:02.715 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+23:55:04.569 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:55:31.346 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:56:16.318 INFO  - FPGA configured successfully with bitstream "C:/tmp/MP-Final/sw/system_hw_platform/system.bit" 
+23:56:23.298 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:56:23.398 INFO  - PS initialization will be done as it is not done before. 
+23:56:23.398 INFO  - Running PS initialization.... 
+23:56:23.908 INFO  - ps7_init is completed. 
+23:56:24.008 INFO  - ps7_post_config is completed. 
+23:56:24.108 INFO  - PS Initialization is complete. 
+23:58:02.580 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:58:21.359 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:59:16.297 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:59:52.276 INFO  - FPGA configured successfully with bitstream "C:/tmp/MP-Final/sw/system_hw_platform/system.bit" 
+23:59:57.723 INFO  - Processor reset is completed for ps7_cortexa9_0 
+23:59:57.823 INFO  - PS initialization will be done as it is not done before. 
+23:59:57.823 INFO  - Running PS initialization.... 
+23:59:58.333 INFO  - ps7_init is completed. 
+23:59:58.433 INFO  - ps7_post_config is completed. 
+23:59:58.533 INFO  - PS Initialization is complete. 
+00:01:20.722 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+00:01:20.726 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
+02:39:10.585 INFO  - Settings changed on project device-tree_bsp_0. Triggering a rebuild... 
+03:22:41.008 INFO  - Settings changed on project device-tree_bsp_0. Triggering a rebuild... 
+03:50:27.143 INFO  - Project system_hw_platform's source hardware specification located at C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
