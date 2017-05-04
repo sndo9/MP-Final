@@ -99,7 +99,14 @@ entity user_logic is
     -- ADD USER PORTS BELOW THIS LINE ------------------
     --USER ports added here
     -- ADD USER PORTS ABOVE THIS LINE ------------------
-
+    security_pin                    : in std_logic;
+    security_pin_out                : out std_logic;
+    control_pin_1                   : out std_logic;
+    control_pin_2                   : out std_logic;
+    control_pin_3                   : out std_logic;
+    control_pin_in                  : in std_logic:
+    control_pin_in_2                : in std_logic;
+    control_pin_in_3                : in std_logic;
     -- DO NOT EDIT BELOW THIS LINE ---------------------
     -- Bus protocol ports, do not add to or delete
     Bus2IP_Clk                     : in  std_logic;
@@ -130,7 +137,10 @@ end entity user_logic;
 architecture IMP of user_logic is
 
   --USER signal declarations added here, as needed for user logic
-
+  signal shadow_pin_1                   : std_logic;
+  signal shadow_pin_2                   : std_logic;
+  signal shadow_pin_3                   : std_logic;
+  signal shadow_security                : std_logic;
   ------------------------------------------
   -- Signals for user logic slave model s/w accessible register example
   ------------------------------------------
@@ -168,16 +178,41 @@ begin
   --USER logic implementation added here
   
   
- check_reg_1:process(slv_reg0)
+ check_reg_1:process(slv_reg0, security_pin)
  begin
  
- if(slv_reg0 = "00000000000000000000001000001101") then
-	slv_reg1 <= "00000000000000000000000000000001";
+ if(slv_reg5 = '1') then
+    if(slv_reg0 = "00000000000000000000001000001101") then
+	    slv_reg1 <= "00000000000000000000000000000001";
+	    shadow_security <= '1';
+    else 
+	    slv_reg1 <= "00000000000000000000000000000000";
+    end if;
  else 
-	slv_reg1<= "00000000000000000000000000000000";
- end if;
+    if
 
  end process check_reg_1;
+ 
+ encode_movement:process(slv_reg2)
+ begin
+ shadow_pin_1 <= slv_reg2(0);
+ shadow_pin_2 <= slv_reg2(1);
+ shadow_pin_3 <= slv_reg2(2); 
+
+ end process send_movement;
+ 
+ decode_movement:process(control_pin_in_1, control_pin_in_2, control_pin_in_3)
+ begin
+ slv_reg3(31 downto 3) <= "00000000000000000000000000000";
+ slv_reg3(2) <= control_pin_in_3;
+ slv_reg3(1) <= control_pin_in_2;
+ slv_reg3(0) <= control_pin_in_1;
+ end process decode_movement
+ 
+ control_pin_1 <= shadow_pin_1;
+ control_pin_2 <= shadow_pin_2;
+ control_pin_3 <= shadow_pin_3;
+ security_pin <= shadow_security;
 
   ------------------------------------------
   -- Example code to read/write user logic slave model s/w accessible registers
@@ -208,12 +243,12 @@ begin
 
     if Bus2IP_Clk'event and Bus2IP_Clk = '1' then
       if Bus2IP_Resetn = '0' then
-        slv_reg0 <= (others => '0');
-        --slv_reg1 <= (others => '0');
-        slv_reg2 <= (others => '0');
-        slv_reg3 <= (others => '0');
-        slv_reg4 <= (others => '0');
-        slv_reg5 <= (others => '0');
+        slv_reg0 <= (others => '0');    --code
+        --slv_reg1 <= (others => '0');  --unlock
+        slv_reg2 <= (others => '0');    --button presses from self
+--      slv_reg3 <= (others => '0');    --button presses from master
+--      slv_reg4 <= (others => '0');    --this ready to fire
+        slv_reg5 <= (others => '0');    --master = 1/ slave = 0
         slv_reg6 <= (others => '0');
         slv_reg7 <= (others => '0');
         slv_reg8 <= (others => '0');
@@ -242,7 +277,7 @@ begin
           when "01000000000000000000000" =>
             for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
               if ( Bus2IP_BE(byte_index) = '1' ) then
-                --slv_reg1(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+--              slv_reg1(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
               end if;
             end loop;
           when "00100000000000000000000" =>
@@ -254,13 +289,13 @@ begin
           when "00010000000000000000000" =>
             for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
               if ( Bus2IP_BE(byte_index) = '1' ) then
-                slv_reg3(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+--                slv_reg3(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
               end if;
             end loop;
           when "00001000000000000000000" =>
             for byte_index in 0 to (C_SLV_DWIDTH/8)-1 loop
               if ( Bus2IP_BE(byte_index) = '1' ) then
-                slv_reg4(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
+--                slv_reg4(byte_index*8+7 downto byte_index*8) <= Bus2IP_Data(byte_index*8+7 downto byte_index*8);
               end if;
             end loop;
           when "00000100000000000000000" =>
