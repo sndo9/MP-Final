@@ -1,4 +1,4 @@
-04:01:02 **** Build of configuration Debug for project bt_configure ****
+16:18:11 **** Build of configuration Debug for project bt_configure ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
@@ -50,5 +50,5 @@ arm-xilinx-eabi-size bt_configure.elf  |tee "bt_configure.elf.size"
 'Finished building: bt_configure.elf.size'
 ' '
 
-04:01:02 Build Finished (took 520ms)
+16:18:11 Build Finished (took 550ms)
 

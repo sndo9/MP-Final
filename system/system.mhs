@@ -37,6 +37,14 @@
  PORT processing_system7_0_DDR_VRP = processing_system7_0_DDR_VRP, DIR = IO
  PORT UART_TX = processing_system7_0_UART0_TX, DIR = O
  PORT UART_RX = processing_system7_0_UART0_RX, DIR = I
+ PORT JB2 = lockout_0_security_out, DIR = O
+ PORT JB1 = lockout_0_security_in, DIR = I
+ PORT JD1_P = lockout_0_control_1_in, DIR = I
+ PORT JC1_N = lockout_0_control_2_out, DIR = O
+ PORT JC1_p = lockout_0_control_1_out, DIR = O
+ PORT JD2_P = lockout_0_control_3_in, DIR = I
+ PORT JC2_p = lockout_0_control_3_out, DIR = O
+ PORT JD1_N = lockout_0_control_2_in, DIR = I
 
 
 BEGIN axi_interconnect
@@ -184,5 +192,13 @@ BEGIN lockout
  PARAMETER C_HIGHADDR = 0x7660ffff
  BUS_INTERFACE S_AXI = axi4lite_0
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+ PORT security_out = lockout_0_security_out
+ PORT security_in = lockout_0_security_in
+ PORT control_1_in = lockout_0_control_1_in
+ PORT control_2_out = lockout_0_control_2_out
+ PORT control_1_out = lockout_0_control_1_out
+ PORT control_3_in = lockout_0_control_3_in
+ PORT control_3_out = lockout_0_control_3_out
+ PORT control_2_in = lockout_0_control_2_in
 END
 

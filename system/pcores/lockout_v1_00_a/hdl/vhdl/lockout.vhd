@@ -140,7 +140,14 @@ entity lockout is
     -- ADD USER PORTS BELOW THIS LINE ------------------
     --USER ports added here
     -- ADD USER PORTS ABOVE THIS LINE ------------------
-
+	 security_in						 : in std_logic;
+    security_out						 : out std_logic;
+    control_1_in						 : in std_logic;
+    control_2_in						 : in std_logic;
+    control_3_in						 : in std_logic;
+    control_1_out						 : out std_logic;
+    control_2_out						 : out std_logic;
+    control_3_out						 : out std_logic;
     -- DO NOT EDIT BELOW THIS LINE ---------------------
     -- Bus protocol ports, do not add to or delete
     S_AXI_ACLK                     : in  std_logic;
@@ -343,6 +350,14 @@ begin
     (
       -- MAP USER PORTS BELOW THIS LINE ------------------
       --USER ports mapped here
+		security_pin                    => security_in,
+      security_pin_out                => security_out,
+      control_pin_1                   => control_1_out,
+      control_pin_2                   => control_2_out,
+      control_pin_3                   => control_3_out,
+      control_pin_in_1                => control_1_in,
+      control_pin_in_2                => control_2_in,
+      control_pin_in_3                => control_3_in,
       -- MAP USER PORTS ABOVE THIS LINE ------------------
 
       Bus2IP_Clk                     => ipif_Bus2IP_Clk,

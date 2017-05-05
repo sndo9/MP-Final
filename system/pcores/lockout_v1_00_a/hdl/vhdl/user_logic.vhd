@@ -104,7 +104,7 @@ entity user_logic is
     control_pin_1                   : out std_logic;
     control_pin_2                   : out std_logic;
     control_pin_3                   : out std_logic;
-    control_pin_in                  : in std_logic:
+    control_pin_in_1                : in std_logic;
     control_pin_in_2                : in std_logic;
     control_pin_in_3                : in std_logic;
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -137,10 +137,10 @@ end entity user_logic;
 architecture IMP of user_logic is
 
   --USER signal declarations added here, as needed for user logic
-  signal shadow_pin_1                   : std_logic;
-  signal shadow_pin_2                   : std_logic;
-  signal shadow_pin_3                   : std_logic;
-  signal shadow_security                : std_logic;
+  signal shadow_pin_1                   : std_logic :='0';
+  signal shadow_pin_2                   : std_logic :='0';
+  signal shadow_pin_3                   : std_logic :='0';
+  signal shadow_security                : std_logic :='0';
   ------------------------------------------
   -- Signals for user logic slave model s/w accessible register example
   ------------------------------------------
@@ -178,20 +178,26 @@ begin
   --USER logic implementation added here
   
   
- check_reg_1:process(slv_reg0, security_pin)
+ unlock:process(slv_reg0, security_pin)
  begin
  
- if(slv_reg5 = '1') then
-    if(slv_reg0 = "00000000000000000000001000001101") then
+ if(slv_reg5(0) = '1') then
+    if(slv_reg0 = "00000000000000000000000000001101") then
 	    slv_reg1 <= "00000000000000000000000000000001";
 	    shadow_security <= '1';
     else 
 	    slv_reg1 <= "00000000000000000000000000000000";
     end if;
  else 
-    if
+    if(security_pin = '1') then
+		slv_reg1 <= "00000000000000000000000000000001";
+		shadow_security <= '1';
+	 else
+		slv_reg1 <= "00000000000000000000000000000000";
+	 end if;
+ end if;
 
- end process check_reg_1;
+ end process unlock;
  
  encode_movement:process(slv_reg2)
  begin
@@ -199,7 +205,7 @@ begin
  shadow_pin_2 <= slv_reg2(1);
  shadow_pin_3 <= slv_reg2(2); 
 
- end process send_movement;
+ end process encode_movement;
  
  decode_movement:process(control_pin_in_1, control_pin_in_2, control_pin_in_3)
  begin
@@ -207,12 +213,12 @@ begin
  slv_reg3(2) <= control_pin_in_3;
  slv_reg3(1) <= control_pin_in_2;
  slv_reg3(0) <= control_pin_in_1;
- end process decode_movement
+ end process decode_movement;
  
  control_pin_1 <= shadow_pin_1;
  control_pin_2 <= shadow_pin_2;
  control_pin_3 <= shadow_pin_3;
- security_pin <= shadow_security;
+ security_pin_out <= shadow_security;
 
   ------------------------------------------
   -- Example code to read/write user logic slave model s/w accessible registers

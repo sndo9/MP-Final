@@ -34,7 +34,15 @@ entity system_stub is
     processing_system7_0_DDR_VRN : inout std_logic;
     processing_system7_0_DDR_VRP : inout std_logic;
     UART_TX : out std_logic;
-    UART_RX : in std_logic
+    UART_RX : in std_logic;
+    JB2 : out std_logic;
+    JB1 : in std_logic;
+    JD1_P : in std_logic;
+    JC1_N : out std_logic;
+    JC1_p : out std_logic;
+    JD2_P : in std_logic;
+    JC2_p : out std_logic;
+    JD1_N : in std_logic
   );
 end system_stub;
 
@@ -67,7 +75,15 @@ architecture STRUCTURE of system_stub is
       processing_system7_0_DDR_VRN : inout std_logic;
       processing_system7_0_DDR_VRP : inout std_logic;
       UART_TX : out std_logic;
-      UART_RX : in std_logic
+      UART_RX : in std_logic;
+      JB2 : out std_logic;
+      JB1 : in std_logic;
+      JD1_P : in std_logic;
+      JC1_N : out std_logic;
+      JC1_p : out std_logic;
+      JD2_P : in std_logic;
+      JC2_p : out std_logic;
+      JD1_N : in std_logic
     );
   end component;
 
@@ -103,7 +119,15 @@ begin
       processing_system7_0_DDR_VRN => processing_system7_0_DDR_VRN,
       processing_system7_0_DDR_VRP => processing_system7_0_DDR_VRP,
       UART_TX => UART_TX,
-      UART_RX => UART_RX
+      UART_RX => UART_RX,
+      JB2 => JB2,
+      JB1 => JB1,
+      JD1_P => JD1_P,
+      JC1_N => JC1_N,
+      JC1_p => JC1_p,
+      JD2_P => JD2_P,
+      JC2_p => JC2_p,
+      JD1_N => JD1_N
     );
 
 end architecture STRUCTURE;

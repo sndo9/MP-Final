@@ -81,3 +81,34 @@
 04:02:13.139 INFO  - Invoking Bootgen:  
 04:02:13.669 INFO  - Bootgen command execution is done. 
 04:18:16.566 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:16:30.761 INFO  - Project system_hw_platform's source hardware specification located at C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+16:16:33.062 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+16:16:33.072 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+16:16:33.082 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+16:16:33.082 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+16:16:33.102 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+16:16:33.112 INFO  - Copied contents of C:\tmp\MP-Final\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+16:16:33.262 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+16:16:49.883 INFO  - Restoring local repository preferences: 
+		 U:\mp\final\MP-3\repository
+		 U:\mp\final\MP-3\repository\ProcessorIPLib 
+16:17:06.733 INFO  - Updating hardware inferred compiler options for bt_configure. 
+16:17:07.483 INFO  - Updating hardware inferred compiler options for hello. 
+16:17:08.242 INFO  - Updating hardware inferred compiler options for zynq_fsbl. 
+16:17:08.252 INFO  - Clearing existing target manager status. 
+16:17:11.584 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.c into \zynq_fsbl\src\ps7_init.c. 
+16:17:11.594 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.h into \zynq_fsbl\src\ps7_init.h. 
+16:17:11.614 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.html into \zynq_fsbl\src\ps7_init.html. 
+16:17:11.624 INFO  - Copied contents of C:\tmp\MP-Final\sw\system_hw_platform\ps7_init.tcl into \zynq_fsbl\src\ps7_init.tcl. 
+16:17:12.704 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+16:19:26.377 INFO  - 'device-tree' is a board support package for an OS for which applications cannot be developed within SDK. 
+16:19:26.377 INFO  - You can configure and build project 'device-tree_bsp_1' within SDK at will, but have to export it into the appropriate third party environment to develop applications. 
+16:19:26.777 WARN  - Unable to determine location of documentation for OS device-tree. 
+16:21:21.457 INFO  - Invoking Bootgen:  
+16:21:22.007 INFO  - Bootgen command execution is done. 
+19:23:03.785 INFO  - 'device-tree' is a board support package for an OS for which applications cannot be developed within SDK. 
+19:23:03.785 INFO  - You can configure and build project 'device-tree_bsp_2' within SDK at will, but have to export it into the appropriate third party environment to develop applications. 
+19:23:04.045 WARN  - Unable to determine location of documentation for OS device-tree. 
+19:26:10.116 INFO  - Invoking Bootgen:  
+19:26:14.685 INFO  - Bootgen command execution is done. 

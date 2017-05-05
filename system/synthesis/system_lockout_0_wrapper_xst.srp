@@ -505,6 +505,8 @@ INFO:HDLCompiler:679 - "C:/Xilinx/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores
 Elaborating entity <soft_reset> (architecture <implementation>) with generics from library <proc_common_v3_00_a>.
 
 Elaborating entity <user_logic> (architecture <IMP>) with generics from library <lockout_v1_00_a>.
+WARNING:HDLCompiler:92 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/user_logic.vhd" Line 184: slv_reg5 should be on the sensitivity list of the process
+WARNING:HDLCompiler:634 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/user_logic.vhd" Line 151: Net <slv_reg4[31]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -536,9 +538,9 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
     Set property "MAX_FANOUT = 10000" for signal <S_AXI_ARESETN>.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
-INFO:Xst:3210 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/lockout.vhd" line 259: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/lockout.vhd" line 259: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/lockout.vhd" line 310: Output port <Reset2Bus_ToutSup> of the instance <SOFT_RESET_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/lockout.vhd" line 266: Output port <Bus2IP_Addr> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/lockout.vhd" line 266: Output port <Bus2IP_RNW> of the instance <AXI_LITE_IPIF_I> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/hdl/vhdl/lockout.vhd" line 317: Output port <Reset2Bus_ToutSup> of the instance <SOFT_RESET_I> is unconnected or connected to loadless signal.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <lockout> synthesized.
@@ -912,9 +914,9 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
         C_SLV_DWIDTH = 32
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
 WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:653 - Signal <slv_reg4> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <slv_reg0>.
     Found 32-bit register for signal <slv_reg2>.
-    Found 32-bit register for signal <slv_reg3>.
-    Found 32-bit register for signal <slv_reg4>.
     Found 32-bit register for signal <slv_reg5>.
     Found 32-bit register for signal <slv_reg6>.
     Found 32-bit register for signal <slv_reg7>.
@@ -933,10 +935,11 @@ WARNING:Xst:37 - Detected unknown constraint/property "sigis". This constraint/p
     Found 32-bit register for signal <slv_reg20>.
     Found 32-bit register for signal <slv_reg21>.
     Found 32-bit register for signal <slv_reg22>.
-    Found 32-bit register for signal <slv_reg0>.
+WARNING:Xst:737 - Found 1-bit latch for signal <shadow_security>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred 704 D-type flip-flop(s).
-	inferred 705 Multiplexer(s).
+	inferred 640 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred 643 Multiplexer(s).
 Unit <user_logic> synthesized.
 
 =========================================================================
@@ -945,14 +948,16 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  4-bit adder                                           : 1
-# Registers                                            : 57
+# Registers                                            : 55
  1-bit register                                        : 30
  2-bit register                                        : 3
- 32-bit register                                       : 23
+ 32-bit register                                       : 21
  4-bit register                                        : 1
-# Multiplexers                                         : 733
- 1-bit 2-to-1 multiplexer                              : 730
- 32-bit 2-to-1 multiplexer                             : 3
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Multiplexers                                         : 671
+ 1-bit 2-to-1 multiplexer                              : 667
+ 32-bit 2-to-1 multiplexer                             : 4
 # FSMs                                                 : 1
 
 =========================================================================
@@ -972,11 +977,11 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 1
  4-bit up counter                                      : 1
-# Registers                                            : 781
- Flip-Flops                                            : 781
-# Multiplexers                                         : 708
- 1-bit 2-to-1 multiplexer                              : 705
- 32-bit 2-to-1 multiplexer                             : 3
+# Registers                                            : 717
+ Flip-Flops                                            : 717
+# Multiplexers                                         : 646
+ 1-bit 2-to-1 multiplexer                              : 642
+ 32-bit 2-to-1 multiplexer                             : 4
 # FSMs                                                 : 1
 
 =========================================================================
@@ -986,6 +991,8 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1293 - FF/Latch <s_axi_rresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <s_axi_bresp_i_0> has a constant value of 0 in block <slave_attachment>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch shadow_security hinder the constant cleaning in the block user_logic.
+   You should achieve better results by setting this init to 1.
 INFO:Xst:2261 - The FF/Latch <ce_out_i_0> in Unit <address_decoder> is equivalent to the following FF/Latch, which will be removed : <cs_out_i_0> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/FSM_0> on signal <state[1:2]> with user encoding.
@@ -1006,17 +1013,19 @@ Optimizing unit <slave_attachment> ...
 
 Optimizing unit <address_decoder> ...
 
-Optimizing unit <soft_reset> ...
-
 Optimizing unit <user_logic> ...
+
+Optimizing unit <soft_reset> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 0) on block system_lockout_0_wrapper, actual ratio is 2.
-FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg has been replicated 1 time(s)
+FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg has been replicated 3 time(s)
 FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10 has been replicated 1 time(s)
-FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_15 has been replicated 1 time(s)
+FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_12 has been replicated 1 time(s)
 FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_16 has been replicated 1 time(s)
+FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_18 has been replicated 1 time(s)
+FlipFlop lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_19 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -1024,8 +1033,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 788
- Flip-Flops                                            : 788
+# Registers                                            : 728
+ Flip-Flops                                            : 728
 
 =========================================================================
 
@@ -1048,19 +1057,21 @@ Top Level Output File Name         : system_lockout_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 836
+# BELS                             : 804
 #      GND                         : 1
 #      INV                         : 2
-#      LUT2                        : 64
-#      LUT3                        : 104
-#      LUT4                        : 83
-#      LUT5                        : 89
-#      LUT6                        : 492
-#      MUXF7                       : 1
-# FlipFlops/Latches                : 788
-#      FD                          : 33
+#      LUT2                        : 60
+#      LUT3                        : 141
+#      LUT4                        : 67
+#      LUT5                        : 96
+#      LUT6                        : 430
+#      MUXF7                       : 6
+#      VCC                         : 1
+# FlipFlops/Latches                : 729
+#      FD                          : 37
 #      FDR                         : 18
-#      FDRE                        : 737
+#      FDRE                        : 673
+#      LD                          : 1
 
 Device utilization summary:
 ---------------------------
@@ -1069,19 +1080,19 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             788  out of  106400     0%  
- Number of Slice LUTs:                  834  out of  53200     1%  
-    Number used as Logic:               834  out of  53200     1%  
+ Number of Slice Registers:             729  out of  106400     0%  
+ Number of Slice LUTs:                  796  out of  53200     1%  
+    Number used as Logic:               796  out of  53200     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   1443
-   Number with an unused Flip Flop:     655  out of   1443    45%  
-   Number with an unused LUT:           609  out of   1443    42%  
-   Number of fully used LUT-FF pairs:   179  out of   1443    12%  
-   Number of unique control sets:        25
+ Number of LUT Flip Flop pairs used:   1312
+   Number with an unused Flip Flop:     583  out of   1312    44%  
+   Number with an unused LUT:           516  out of   1312    39%  
+   Number of fully used LUT-FF pairs:   213  out of   1312    16%  
+   Number of unique control sets:        23
 
 IO Utilization: 
- Number of IOs:                         148
+ Number of IOs:                         156
  Number of bonded IOBs:                   0  out of    200     0%  
 
 Specific Feature Utilization:
@@ -1104,11 +1115,15 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------------------------------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)                                            | Load  |
------------------------------------+------------------------------------------------------------------+-------+
-S_AXI_ACLK                         | NONE(lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1)| 788   |
------------------------------------+------------------------------------------------------------------+-------+
+-------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+Clock Signal                                                             | Clock buffer(FF name)                                            | Load  |
+-------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+S_AXI_ACLK                                                               | NONE(lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1)| 728   |
+lockout_0/USER_LOGIC_I/slv_reg1<0>(lockout_0/USER_LOGIC_I/slv_reg1<0>8:O)| NONE(*)(lockout_0/USER_LOGIC_I/shadow_security)                  | 1     |
+-------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
@@ -1119,10 +1134,10 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 4.239ns (Maximum Frequency: 235.909MHz)
-   Minimum input arrival time before clock: 2.521ns
-   Maximum output required time after clock: 2.855ns
-   Maximum combinational path delay: 1.547ns
+   Minimum period: 3.651ns (Maximum Frequency: 273.898MHz)
+   Minimum input arrival time before clock: 2.379ns
+   Maximum output required time after clock: 2.828ns
+   Maximum combinational path delay: 1.199ns
 
 Timing Details:
 ---------------
@@ -1130,81 +1145,97 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'S_AXI_ACLK'
-  Clock period: 4.239ns (frequency: 235.909MHz)
-  Total number of paths / destination ports: 45838 / 1662
+  Clock period: 3.651ns (frequency: 273.898MHz)
+  Total number of paths / destination ports: 34613 / 1570
 -------------------------------------------------------------------------
-Delay:               4.239ns (Levels of Logic = 7)
-  Source:            lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8 (FF)
-  Destination:       lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31 (FF)
+Delay:               3.651ns (Levels of Logic = 5)
+  Source:            lockout_0/USER_LOGIC_I/slv_reg0_24 (FF)
+  Destination:       lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0 (FF)
   Source Clock:      S_AXI_ACLK rising
   Destination Clock: S_AXI_ACLK rising
 
-  Data Path: lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8 to lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_31
+  Data Path: lockout_0/USER_LOGIC_I/slv_reg0_24 to lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              12   0.282   0.557  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_8)
-     LUT2:I0->O           34   0.053   0.892  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<8>1 (lockout_0/ipif_Bus2IP_RdCE<15>)
-     LUT6:I0->O            1   0.053   0.000  lockout_0/USER_LOGIC_I/GND_43_o_slv_reg_read_sel[22]_equal_113_o<22>111_F (N592)
-     MUXF7:I0->O          68   0.214   0.573  lockout_0/USER_LOGIC_I/GND_43_o_slv_reg_read_sel[22]_equal_113_o<22>111 (lockout_0/USER_LOGIC_I/GND_43_o_slv_reg_read_sel[22]_equal_113_o<22>11)
-     LUT6:I5->O           32   0.053   0.566  lockout_0/USER_LOGIC_I/GND_43_o_slv_reg_read_sel[22]_equal_107_o<22>1 (lockout_0/USER_LOGIC_I/GND_43_o_slv_reg_read_sel[22]_equal_107_o)
-     LUT6:I5->O            1   0.053   0.413  lockout_0/Mmux_ipif_IP2Bus_Data117 (lockout_0/Mmux_ipif_IP2Bus_Data17)
-     LUT5:I4->O            1   0.053   0.413  lockout_0/Mmux_ipif_IP2Bus_Data127 (lockout_0/Mmux_ipif_IP2Bus_Data117)
-     LUT6:I5->O            1   0.053   0.000  lockout_0/Mmux_ipif_IP2Bus_Data128 (lockout_0/ipif_IP2Bus_Data<0>)
+     FDRE:C->Q             2   0.282   0.745  lockout_0/USER_LOGIC_I/slv_reg0_24 (lockout_0/USER_LOGIC_I/slv_reg0_24)
+     LUT6:I0->O            1   0.053   0.725  lockout_0/USER_LOGIC_I/slv_reg1<0>5 (lockout_0/USER_LOGIC_I/slv_reg1<0>5)
+     LUT6:I1->O            1   0.053   0.413  lockout_0/USER_LOGIC_I/slv_reg1<0>7 (lockout_0/USER_LOGIC_I/slv_reg1<0>7)
+     LUT3:I2->O            2   0.053   0.608  lockout_0/USER_LOGIC_I/slv_reg1<0>8 (lockout_0/USER_LOGIC_I/slv_reg1<0>)
+     LUT6:I3->O            1   0.053   0.602  lockout_0/Mmux_ipif_IP2Bus_Data112 (lockout_0/Mmux_ipif_IP2Bus_Data12)
+     LUT6:I3->O            1   0.053   0.000  lockout_0/Mmux_ipif_IP2Bus_Data127 (lockout_0/ipif_IP2Bus_Data<0>)
      FDRE:D                    0.011          lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0
     ----------------------------------------
-    Total                      4.239ns (0.825ns logic, 3.414ns route)
-                                       (19.5% logic, 80.5% route)
+    Total                      3.651ns (0.558ns logic, 3.093ns route)
+                                       (15.3% logic, 84.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'S_AXI_ACLK'
-  Total number of paths / destination ports: 2239 / 1456
+  Total number of paths / destination ports: 2176 / 1335
 -------------------------------------------------------------------------
-Offset:              2.521ns (Levels of Logic = 4)
-  Source:            S_AXI_ARVALID (PAD)
-  Destination:       lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_23 (FF)
+Offset:              2.379ns (Levels of Logic = 4)
+  Source:            S_AXI_WDATA<0> (PAD)
+  Destination:       lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0 (FF)
   Destination Clock: S_AXI_ACLK rising
 
-  Data Path: S_AXI_ARVALID to lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_23
+  Data Path: S_AXI_WDATA<0> to lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT3:I0->O            2   0.053   0.745  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/Mmux_bus2ip_addr_i91 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i<8>)
-     LUT6:I0->O           24   0.053   0.748  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].GEN_FOR_MULTI_CS.MEM_SELECT_I/Mmux_CS11 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/pselect_hit_i<1>)
-     LUT6:I3->O            1   0.053   0.602  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I/Mmux_CS11 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_expnd_i<10>)
-     LUT6:I3->O            2   0.053   0.000  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10_rstpot (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10_rstpot)
-     FD:D                      0.011          lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_10
+     LUT6:I0->O            3   0.053   0.753  lockout_0/SOFT_RESET_I/reset_error1 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3)
+     LUT6:I0->O            3   0.053   0.499  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done7 (S_AXI_AWREADY)
+     LUT4:I2->O           25   0.053   0.564  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr1 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_ce_clr)
+     LUT4:I3->O            1   0.053   0.000  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_23_rstpot (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_23_rstpot)
+     FD:D                      0.011          lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_23
     ----------------------------------------
-    Total                      2.521ns (0.426ns logic, 2.095ns route)
-                                       (16.9% logic, 83.1% route)
+    Total                      2.379ns (0.563ns logic, 1.816ns route)
+                                       (23.7% logic, 76.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'S_AXI_ACLK'
-  Total number of paths / destination ports: 170 / 39
+  Total number of paths / destination ports: 145 / 42
 -------------------------------------------------------------------------
-Offset:              2.855ns (Levels of Logic = 4)
-  Source:            lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (FF)
-  Destination:       S_AXI_WREADY (PAD)
+Offset:              2.828ns (Levels of Logic = 4)
+  Source:            lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2 (FF)
+  Destination:       S_AXI_ARREADY (PAD)
   Source Clock:      S_AXI_ACLK rising
 
-  Data Path: lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg to S_AXI_WREADY
+  Data Path: lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2 to S_AXI_ARREADY
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             193   0.282   0.601  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg)
-     LUT2:I1->O            2   0.053   0.745  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<22>1 (lockout_0/ipif_Bus2IP_WrCE<1>)
-     LUT6:I0->O            1   0.053   0.602  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done2)
-     LUT6:I3->O            1   0.053   0.413  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6_SW0 (N588)
-     LUT6:I5->O           27   0.053   0.000  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6 (S_AXI_AWREADY)
+     FD:C->Q               8   0.282   0.531  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2)
+     LUT2:I0->O           38   0.053   0.879  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<2>1 (lockout_0/ipif_Bus2IP_RdCE<21>)
+     LUT6:I1->O            2   0.053   0.419  lockout_0/USER_LOGIC_I/slv_read_ack<0>1 (lockout_0/USER_LOGIC_I/slv_read_ack<0>)
+     LUT6:I5->O            4   0.053   0.505  lockout_0/USER_LOGIC_I/slv_read_ack<0>5 (lockout_0/user_IP2Bus_RdAck)
+     LUT2:I0->O            0   0.053   0.000  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rd_done1 (S_AXI_ARREADY)
     ----------------------------------------
-    Total                      2.855ns (0.494ns logic, 2.361ns route)
-                                       (17.3% logic, 82.7% route)
+    Total                      2.828ns (0.494ns logic, 2.334ns route)
+                                       (17.5% logic, 82.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'lockout_0/USER_LOGIC_I/slv_reg1<0>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.389ns (Levels of Logic = 0)
+  Source:            lockout_0/USER_LOGIC_I/shadow_security (LATCH)
+  Destination:       security_out (PAD)
+  Source Clock:      lockout_0/USER_LOGIC_I/slv_reg1<0> falling
+
+  Data Path: lockout_0/USER_LOGIC_I/shadow_security to security_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               0   0.389   0.000  lockout_0/USER_LOGIC_I/shadow_security (lockout_0/USER_LOGIC_I/shadow_security)
+    ----------------------------------------
+    Total                      0.389ns (0.389ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
 
 =========================================================================
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 8 / 2
 -------------------------------------------------------------------------
-Delay:               1.547ns (Levels of Logic = 3)
+Delay:               1.199ns (Levels of Logic = 2)
   Source:            S_AXI_WDATA<0> (PAD)
   Destination:       S_AXI_WREADY (PAD)
 
@@ -1212,12 +1243,11 @@ Delay:               1.547ns (Levels of Logic = 3)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT6:I0->O            1   0.053   0.635  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done2_SW0 (N322)
-     LUT6:I2->O            1   0.053   0.413  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6_SW0 (N588)
-     LUT6:I5->O           27   0.053   0.000  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done6 (S_AXI_AWREADY)
+     LUT6:I0->O            3   0.053   0.753  lockout_0/SOFT_RESET_I/reset_error1 (lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done3)
+     LUT6:I0->O            3   0.053   0.000  lockout_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/wr_done7 (S_AXI_AWREADY)
     ----------------------------------------
-    Total                      1.547ns (0.499ns logic, 1.048ns route)
-                                       (32.3% logic, 67.7% route)
+    Total                      1.199ns (0.446ns logic, 0.753ns route)
+                                       (37.2% logic, 62.8% route)
 
 =========================================================================
 
@@ -1229,20 +1259,20 @@ Clock to Setup on destination clock S_AXI_ACLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-S_AXI_ACLK     |    4.239|         |         |         |
+S_AXI_ACLK     |    3.651|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.00 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.71 secs
  
 --> 
 
-Total memory usage is 469640 kilobytes
+Total memory usage is 537224 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   18 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

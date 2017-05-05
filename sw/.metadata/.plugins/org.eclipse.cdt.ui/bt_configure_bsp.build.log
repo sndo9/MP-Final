@@ -1,4 +1,4 @@
-04:00:48 **** Build of project bt_configure_bsp ****
+16:17:57 **** Build of project bt_configure_bsp ****
 make -k all 
 libgen -hw ../system_hw_platform/system.xml\
 	       -lp U:/mp/final/MP-3/repository -lp U:/mp/final/MP-3/repository/ProcessorIPLib\
@@ -45,5 +45,5 @@ arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
 Running execs_generate.
 'Finished building libraries'
 
-04:01:02 Build Finished (took 13s.582ms)
+16:18:10 Build Finished (took 13s.176ms)
 

@@ -1,4 +1,4 @@
-04:01:02 **** Build of configuration Debug for project zynq_fsbl ****
+16:18:11 **** Build of configuration Debug for project zynq_fsbl ****
 make all 
 'Building file: ../src/ddr_init.c'
 'Invoking: ARM gcc compiler'
@@ -87,5 +87,5 @@ arm-xilinx-eabi-size zynq_fsbl.elf  |tee "zynq_fsbl.elf.size"
 'Finished building: zynq_fsbl.elf.size'
 ' '
 
-04:01:05 Build Finished (took 2s.596ms)
+16:18:14 Build Finished (took 2s.601ms)
 

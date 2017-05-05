@@ -56,4 +56,13 @@ PORT S_AXI_BRESP = BRESP, DIR = O, VEC = [1:0], BUS = S_AXI
 PORT S_AXI_BVALID = BVALID, DIR = O, BUS = S_AXI
 PORT S_AXI_AWREADY = AWREADY, DIR = O, BUS = S_AXI
 
+PORT security_in	= "", DIR = I
+PORT security_out = "", DIR = O
+PORT control_1_in = "", DIR = I
+PORT control_2_in = "", DIR = I
+PORT control_3_in = "", DIR = I
+PORT control_1_out = "", DIR = O
+PORT control_2_out = "", DIR = O
+PORT control_3_out = "", DIR = O
+
 END

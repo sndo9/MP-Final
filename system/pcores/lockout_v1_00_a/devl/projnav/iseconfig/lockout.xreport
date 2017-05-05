@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-05-04T03:33:22</DateModified>
+  <DateModified>2017-05-04T15:35:19</DateModified>
   <ModuleName>lockout</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/devl/projnav/iseconfig/lockout.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/devl/projnav</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/tmp/MP-Final/system/pcores/lockout_v1_00_a/devl/projnav\</ImplementationReportsDirectory>
   <DateInitialized>2017-05-04T03:33:22</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

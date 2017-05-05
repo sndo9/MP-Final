@@ -10,6 +10,8 @@ Loading design module
 "C:/tmp/MP-Final/system/implementation/system_processing_system7_0_wrapper.ngc".
 ..
 Loading design module
+"C:/tmp/MP-Final/system/implementation/system_lockout_0_wrapper.ngc"...
+Loading design module
 "C:/tmp/MP-Final/system/implementation/system_axi4lite_0_wrapper.ngc"...
 Loading design module
 "C:/tmp/MP-Final/system/implementation/system_sws_8bits_wrapper.ngc"...
@@ -17,8 +19,6 @@ Loading design module
 "C:/tmp/MP-Final/system/implementation/system_leds_8bits_wrapper.ngc"...
 Loading design module
 "C:/tmp/MP-Final/system/implementation/system_btns_5bits_wrapper.ngc"...
-Loading design module
-"C:/tmp/MP-Final/system/implementation/system_lockout_0_wrapper.ngc"...
 Applying constraints in
 "C:/tmp/MP-Final/system/implementation/system_processing_system7_0_wrapper.ncf"
 to module "processing_system7_0"...
@@ -214,7 +214,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 132
 
-Total memory usage is 261108 kilobytes
+Total memory usage is 260148 kilobytes
 
 Writing NGD file "system.ngd" ...
 Total REAL time to NGDBUILD completion:  12 sec

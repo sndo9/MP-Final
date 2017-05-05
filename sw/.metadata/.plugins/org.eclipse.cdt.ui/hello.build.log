@@ -1,4 +1,4 @@
-04:00:45 **** Build of configuration Debug for project hello ****
+16:17:53 **** Build of configuration Debug for project hello ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM gcc compiler'
@@ -24,5 +24,5 @@ arm-xilinx-eabi-size hello.elf  |tee "hello.elf.size"
 'Finished building: hello.elf.size'
 ' '
 
-04:00:45 Build Finished (took 484ms)
+16:17:54 Build Finished (took 872ms)
 

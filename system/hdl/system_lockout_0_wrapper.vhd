@@ -30,7 +30,15 @@ entity system_lockout_0_wrapper is
     S_AXI_WREADY : out std_logic;
     S_AXI_BRESP : out std_logic_vector(1 downto 0);
     S_AXI_BVALID : out std_logic;
-    S_AXI_AWREADY : out std_logic
+    S_AXI_AWREADY : out std_logic;
+    security_in : in std_logic;
+    security_out : out std_logic;
+    control_1_in : in std_logic;
+    control_2_in : in std_logic;
+    control_3_in : in std_logic;
+    control_1_out : out std_logic;
+    control_2_out : out std_logic;
+    control_3_out : out std_logic
   );
 end system_lockout_0_wrapper;
 
@@ -70,7 +78,15 @@ architecture STRUCTURE of system_lockout_0_wrapper is
       S_AXI_WREADY : out std_logic;
       S_AXI_BRESP : out std_logic_vector(1 downto 0);
       S_AXI_BVALID : out std_logic;
-      S_AXI_AWREADY : out std_logic
+      S_AXI_AWREADY : out std_logic;
+      security_in : in std_logic;
+      security_out : out std_logic;
+      control_1_in : in std_logic;
+      control_2_in : in std_logic;
+      control_3_in : in std_logic;
+      control_1_out : out std_logic;
+      control_2_out : out std_logic;
+      control_3_out : out std_logic
     );
   end component;
 
@@ -110,7 +126,15 @@ begin
       S_AXI_WREADY => S_AXI_WREADY,
       S_AXI_BRESP => S_AXI_BRESP,
       S_AXI_BVALID => S_AXI_BVALID,
-      S_AXI_AWREADY => S_AXI_AWREADY
+      S_AXI_AWREADY => S_AXI_AWREADY,
+      security_in => security_in,
+      security_out => security_out,
+      control_1_in => control_1_in,
+      control_2_in => control_2_in,
+      control_3_in => control_3_in,
+      control_1_out => control_1_out,
+      control_2_out => control_2_out,
+      control_3_out => control_3_out
     );
 
 end architecture STRUCTURE;

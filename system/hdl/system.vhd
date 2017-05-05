@@ -34,7 +34,15 @@ entity system is
     processing_system7_0_DDR_VRN : inout std_logic;
     processing_system7_0_DDR_VRP : inout std_logic;
     UART_TX : out std_logic;
-    UART_RX : in std_logic
+    UART_RX : in std_logic;
+    JB2 : out std_logic;
+    JB1 : in std_logic;
+    JD1_P : in std_logic;
+    JC1_N : out std_logic;
+    JC1_p : out std_logic;
+    JD2_P : in std_logic;
+    JC2_p : out std_logic;
+    JD1_N : in std_logic
   );
 end system;
 
@@ -1040,7 +1048,15 @@ architecture STRUCTURE of system is
       S_AXI_WREADY : out std_logic;
       S_AXI_BRESP : out std_logic_vector(1 downto 0);
       S_AXI_BVALID : out std_logic;
-      S_AXI_AWREADY : out std_logic
+      S_AXI_AWREADY : out std_logic;
+      security_in : in std_logic;
+      security_out : out std_logic;
+      control_1_in : in std_logic;
+      control_2_in : in std_logic;
+      control_3_in : in std_logic;
+      control_1_out : out std_logic;
+      control_2_out : out std_logic;
+      control_3_out : out std_logic
     );
   end component;
 
@@ -1117,6 +1133,14 @@ architecture STRUCTURE of system is
   signal axi4lite_0_S_WREADY : std_logic_vector(0 to 0);
   signal axi4lite_0_S_WSTRB : std_logic_vector(3 downto 0);
   signal axi4lite_0_S_WVALID : std_logic_vector(0 to 0);
+  signal lockout_0_control_1_in : std_logic;
+  signal lockout_0_control_1_out : std_logic;
+  signal lockout_0_control_2_in : std_logic;
+  signal lockout_0_control_2_out : std_logic;
+  signal lockout_0_control_3_in : std_logic;
+  signal lockout_0_control_3_out : std_logic;
+  signal lockout_0_security_in : std_logic;
+  signal lockout_0_security_out : std_logic;
   signal net_gnd0 : std_logic;
   signal net_gnd1 : std_logic_vector(0 to 0);
   signal net_gnd2 : std_logic_vector(1 downto 0);
@@ -1151,6 +1175,14 @@ begin
   processing_system7_0_DDR_WEB_pin <= processing_system7_0_DDR_WEB;
   UART_TX <= processing_system7_0_UART0_TX;
   processing_system7_0_UART0_RX <= UART_RX;
+  JB2 <= lockout_0_security_out;
+  lockout_0_security_in <= JB1;
+  lockout_0_control_1_in <= JD1_P;
+  JC1_N <= lockout_0_control_2_out;
+  JC1_p <= lockout_0_control_1_out;
+  lockout_0_control_3_in <= JD2_P;
+  JC2_p <= lockout_0_control_3_out;
+  lockout_0_control_2_in <= JD1_N;
   pgassign1(3 downto 3) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(2 downto 2) <= processing_system7_0_FCLK_CLK0(0 to 0);
   pgassign1(1 downto 1) <= processing_system7_0_FCLK_CLK0(0 to 0);
@@ -2163,7 +2195,15 @@ begin
       S_AXI_WREADY => axi4lite_0_M_WREADY(3),
       S_AXI_BRESP => axi4lite_0_M_BRESP(7 downto 6),
       S_AXI_BVALID => axi4lite_0_M_BVALID(3),
-      S_AXI_AWREADY => axi4lite_0_M_AWREADY(3)
+      S_AXI_AWREADY => axi4lite_0_M_AWREADY(3),
+      security_in => lockout_0_security_in,
+      security_out => lockout_0_security_out,
+      control_1_in => lockout_0_control_1_in,
+      control_2_in => lockout_0_control_2_in,
+      control_3_in => lockout_0_control_3_in,
+      control_1_out => lockout_0_control_1_out,
+      control_2_out => lockout_0_control_2_out,
+      control_3_out => lockout_0_control_3_out
     );
 
   iobuf_0 : IOBUF
